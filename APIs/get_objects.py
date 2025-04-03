@@ -1,10 +1,8 @@
 import requests
-
 from APIs.Base_API import BaseAPI
 
 class GetObjects(BaseAPI):
     get_obj_endpoint = "objects"
-
 
     def get_list_of_all_objects(self):
         url = f"{self.base_url}{self.get_obj_endpoint}"
@@ -19,4 +17,3 @@ class GetObjects(BaseAPI):
         url = f"{self.base_url}{self.get_obj_endpoint}"
         params = {"id": product_id}
         return requests.get(url, params=params)
-
