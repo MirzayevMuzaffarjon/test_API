@@ -1,5 +1,4 @@
 import requests
-from jinja2.utils import urlize
 
 from APIs.Base_API import BaseAPI
 
@@ -20,3 +19,4 @@ class GetObjects(BaseAPI):
         url = f"{self.base_url}{self.get_obj_endpoint}"
         params = {"id": product_id}
         return requests.get(url, params=params)
+
